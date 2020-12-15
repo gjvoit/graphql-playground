@@ -10,8 +10,8 @@ import cors from 'cors';
 const client = new pg.Client({
   host: "localhost",
   user: "postgres",
-  password: "SkySpecs4078ExtraordinarilySecure",
-  database: "skyspecsgaret"
+  password: "GraphQLPlayground4078ExtraordinarilySecure",
+  database: "graphqlgaret"
 })
 client.connect()
  

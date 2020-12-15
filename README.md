@@ -1,12 +1,12 @@
-# skyspecs-code-challenge
+# GraphQL Playground
 
 ## Backend Setup
 
 ### DB Setup
 
 - Install PostgreSQL
-- Modify the `postgres` user password to be `SkySpecs4078ExtraordinarilySecure`
-  - Or update `setup-db.sh` and `index.js` to replace `SkySpecs4078ExtraordinarilySecure` with your `postgres` user's password.
+- Modify the `postgres` user password to be `GraphQLPlayground4078ExtraordinarilySecure`
+  - Or update `setup-db.sh` and `index.js` to replace `GraphQLPlayground4078ExtraordinarilySecure` with your `postgres` user's password.
 - Run bash scripts/setup-db.sh
 
 ### Server/API Setup

@@ -24,7 +24,7 @@ const App: FC = () => {
   return (
     <div className="App">
       <header className="App__header">
-        SkySpecs Gist Viewer
+        Gist Viewer
       </header>
       <div className="App__nav-container">
         <div className={classNames('App__nav-item', {'active': activeComponent === ActiveComponent.GistsByUser})} onClick={() => setActiveComponent(ActiveComponent.GistsByUser)}>
