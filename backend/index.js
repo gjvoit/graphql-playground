@@ -9,7 +9,7 @@ import cors from 'cors';
 // Also do not use a superuser in a production environment.
 const client = new pg.Client({
   host: "localhost",
-  user: "postgres",
+  user: "garetuser",
   password: "GraphQLPlayground4078ExtraordinarilySecure",
   database: "graphqlgaret"
 })

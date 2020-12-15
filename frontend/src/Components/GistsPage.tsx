@@ -53,7 +53,7 @@ const GistsPage: FC = () => {
       {!showGistDetail && (
         <div className="GistsPage__GistsContent">
           <input type={'text'} value={username} onChange={onChangeUsername} />
-          <button onClick={handleFetchGistsByUsername}>Click me!</button>
+          <button onClick={handleFetchGistsByUsername}>Lookup Gists!</button>
           {fetchGistsLoadingStatus === LoadingStatus.Success && <GistList gists={gists} handleClickGistSummary={handleClickGistSummary} />}
         </div>
       )}

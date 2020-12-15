@@ -1,14 +1,16 @@
 import React, { FC, useState } from 'react';
 
-import queries, { Gist, GistFile } from '../queries';
-import GistList from './GistList';
+import queries from '../queries';
 
 const Favorites: FC = () => {
-  const [favoriteIDs, setFavoriteIDs] = useState([]);
+  const [favoriteGistIDs, setFavoriteGistIDs] = useState([]);
   React.useEffect(() => {
     queries.getFavorites()
       .then(resp => {
-        console.log(resp);
+        return resp.json()
+      })
+      .then(resp => {
+        setFavoriteGistIDs(resp.data.getFavorites);
       })
       .catch(err => {
         console.log(err);
@@ -16,7 +18,9 @@ const Favorites: FC = () => {
   }, []);
   return (
     <div className="Favorites">
-      Your Favorites! (TODO)
+      {favoriteGistIDs.length > 0 && favoriteGistIDs.map(favoriteGistID => {
+        return <div> GistID: {favoriteGistID} </div>
+      })}
     </div>
   );
 }
